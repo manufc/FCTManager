@@ -5,11 +5,13 @@
  */
 package dao;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import model.Empresa;
 import idao.IEmpresaDAO;
+import java.util.ArrayList;
 
 /**
  *
@@ -59,7 +61,38 @@ public class EmpresaDAO implements IEmpresaDAO{
 
     @Override
     public List<Empresa> getEmpresas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Empresa> empresas = new ArrayList<Empresa>();
+        ResultSet rs;
+        String sql = "SELECT * FROM Empresa";
+        
+        try{
+            stm = db.getCon().createStatement();
+            rs = stm.executeQuery(sql);
+            
+            while(rs.next()){
+                Empresa e = new Empresa(rs.getString("cif"), 
+                                        rs.getString("nombre"), 
+                                        rs.getString("direccion"), 
+                                        rs.getString("localidad"),
+                                        rs.getString("provincia"),
+                                        rs.getString("cp"),
+                                        rs.getString("telefono"),
+                                        rs.getString("fax"),
+                                        rs.getString("email"),
+                                        rs.getString("responsable"),
+                                        rs.getString("tutor"));
+                empresas.add(e);
+                                        
+            }
+            
+            stm.close();
+        }catch(SQLException e){
+            System.out.println("Error al insertar Empresa: "+e.getMessage());
+            return null;
+        }
+        
+        
+        return empresas;
     }
 
     @Override

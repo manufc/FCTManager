@@ -169,19 +169,47 @@ public class Centro {
     }
     
     public void addProfesor(Profesor p){
-        this.profesores.add(p);
+        this.getProfesores().add(p);
     }
     
     public void removeProfesor(Profesor p){
-        this.profesores.remove(p);
+        this.getProfesores().remove(p);
     }
     
     public void addCurso(Curso c){
-        this.cursos.add(c);
+        this.getCursos().add(c);
     }
     
     public void removeCurso(Curso c){
-        this.cursos.remove(c);
+        this.getCursos().remove(c);
+    }
+
+    /**
+     * @return the profesores
+     */
+    public List<Profesor> getProfesores() {
+        return profesores;
+    }
+
+    /**
+     * @param profesores the profesores to set
+     */
+    public void setProfesores(List<Profesor> profesores) {
+        this.profesores = profesores;
+    }
+
+    /**
+     * @return the cursos
+     */
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    /**
+     * @param cursos the cursos to set
+     */
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
     }
     
 }

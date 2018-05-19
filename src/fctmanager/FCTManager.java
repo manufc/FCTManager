@@ -6,6 +6,10 @@
 package fctmanager;
 
 import dao.Database;
+import dao.EmpresaDAO;
+import java.util.ArrayList;
+import java.util.List;
+import model.Empresa;
 import view.MainJFrame;
 
 /**
@@ -20,7 +24,7 @@ public class FCTManager {
     public static void main(String[] args) {
         Database db = new Database("localhost", "3306", "root", "m97a81","FCT_APP");
         System.out.print("Conectando...");
-        
+        EmpresaDAO empresaDAO;
         
         
         if(db.connect()!=null){
@@ -29,12 +33,7 @@ public class FCTManager {
             System.out.println("[FALLO]");
         }
         
-        System.out.print("Desconectando...");
-        if(db.disconnect()>=0){
-            System.out.println("[OK]");
-        }else{
-            System.out.println("[FALLO]");
-        }
+        
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -65,6 +64,23 @@ public class FCTManager {
                 new MainJFrame().setVisible(true);
             }
         });
+        
+        System.out.println("Obteniendo datos de empresas...");
+        empresaDAO = new EmpresaDAO(db);
+        List<Empresa> empresas = empresaDAO.getEmpresas();
+        if(empresas!=null){
+            System.out.println(empresas.size()+" empresas cargadas");        
+            System.out.println("[OK]");
+        }else{
+            System.out.println("[FALLO]");
+        }
+        
+        System.out.print("Desconectando...");
+        if(db.disconnect()>=0){
+            System.out.println("[OK]");
+        }else{
+            System.out.println("[FALLO]");
+        }
     }
     
 }

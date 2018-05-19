@@ -18,14 +18,16 @@ public class FCT {
     private int nHoras;
     private Convenio convenio;
     private Profesor tutor;
+    private Alumno alumno;
 
-    public FCT(int id, Date fechaInicio, Date fechaFin, int nHoras, Convenio convenio, Profesor tutor) {
+    public FCT(int id, Date fechaInicio, Date fechaFin, int nHoras, Convenio convenio, Profesor tutor, Alumno alumno) {
         this.id = id;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.nHoras = nHoras;
         this.convenio = convenio;
         this.tutor = tutor;
+        this.alumno = alumno;
     }
 
     /**
@@ -110,6 +112,20 @@ public class FCT {
      */
     public void setTutor(Profesor tutor) {
         this.tutor = tutor;
+    }
+
+    /**
+     * @return the alumno
+     */
+    public Alumno getAlumno() {
+        return alumno;
+    }
+
+    /**
+     * @param alumno the alumno to set
+     */
+    public void setAlumno(Alumno alumno) {
+        this.alumno = alumno;
     }
 
 

@@ -5,6 +5,9 @@
  */
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author manue
@@ -14,12 +17,15 @@ public class Curso {
     private String nombre;
     private int etapa;
     private int year;
+    private List<Alumno> alumnos;
 
-    public Curso(int id, String nombre, int etapa, int year) {
+    public Curso(int id, String nombre, int etapa, int year, List<Alumno> alumnos) {
         this.id = id;
         this.nombre = nombre;
         this.etapa = etapa;
         this.year = year;
+        this.alumnos = new ArrayList<Alumno>();
+        this.alumnos.addAll(alumnos);
     }
 
     /**
@@ -77,6 +83,29 @@ public class Curso {
     public void setYear(int year) {
         this.year = year;
     }
+    
+    public void addAlumno(Alumno a){
+        this.getAlumnos().add(a);
+    }
+    
+    public void removeAlumno(Alumno a){
+        this.getAlumnos().remove(a);
+    }
+
+    /**
+     * @return the alumnos
+     */
+    public List<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    /**
+     * @param alumnos the alumnos to set
+     */
+    public void setAlumnos(List<Alumno> alumnos) {
+        this.alumnos = alumnos;
+    }
+            
     
     
 }
