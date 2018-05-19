@@ -15,13 +15,15 @@ public class Profesor {
     private String apellidos;
     private String telefono;
     private String email;
+    private Horario horario;
 
-    public Profesor(String nif, String nombre, String apellidos, String telefono, String email) {
+    public Profesor(String nif, String nombre, String apellidos, String telefono, String email, Horario horario) {
         this.nif = nif;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;
         this.email = email;
+        this.horario = horario;
     }
 
     /**
@@ -92,6 +94,20 @@ public class Profesor {
      */
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    /**
+     * @return the horario
+     */
+    public Horario getHorario() {
+        return horario;
+    }
+
+    /**
+     * @param horario the horario to set
+     */
+    public void setHorario(Horario horario) {
+        this.horario = horario;
     }
     
 

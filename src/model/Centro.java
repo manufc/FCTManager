@@ -5,6 +5,7 @@
  */
 package model;
 
+import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +24,9 @@ public class Centro {
     private String fax;
     private String responsable;
     private List<Profesor> profesores;
+    private List<Curso> cursos;
 
-    public Centro(String cif, String nombre, String direccion, String localidad, String cp, String provincia, String telefono, String fax, String responsable) {
+    public Centro(String cif, String nombre, String direccion, String localidad, String cp, String provincia, String telefono, String fax, String responsable, List<Profesor> profesores, List<Curso> cursos) {
         this.cif = cif;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -35,6 +37,9 @@ public class Centro {
         this.fax = fax;
         this.responsable = responsable;
         this.profesores = new ArrayList<Profesor>();
+        this.profesores.addAll(profesores);
+        this.cursos = new ArrayList<Curso>();
+        this.cursos.addAll(cursos);
     }
 
     /**
@@ -171,5 +176,12 @@ public class Centro {
         this.profesores.remove(p);
     }
     
+    public void addCurso(Curso c){
+        this.cursos.add(c);
+    }
+    
+    public void removeCurso(Curso c){
+        this.cursos.remove(c);
+    }
     
 }
