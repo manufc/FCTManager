@@ -7,6 +7,8 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -31,10 +33,16 @@ public class Database {
     
     public Connection connect(){
         
-        this.server = "jdbc:mysql://"+this.host+":"+this.port+"/"+this.schema+"?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Europe/Madrid";
+        this.server = "jdbc:derby:./derby/FCT_APP";
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+           Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
         }catch(ClassNotFoundException e){
+            System.out.println("Error al registrar el driver: "+e.getLocalizedMessage());
+            return null;
+        } catch (InstantiationException e) {
+            System.out.println("Error al registrar el driver: "+e.getLocalizedMessage());
+            return null;
+        } catch (IllegalAccessException e) {
             System.out.println("Error al registrar el driver: "+e.getLocalizedMessage());
             return null;
         }
@@ -43,6 +51,7 @@ public class Database {
             this.con = DriverManager.getConnection(this.server,this.user,this.password);
         }catch(SQLException e){
             System.out.println("Error al conectar a "+server+": "+e.getLocalizedMessage());
+            e.printStackTrace();
             return null;
         }
         

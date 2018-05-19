@@ -30,7 +30,7 @@ public class EmpresaDAO implements IEmpresaDAO{
      
     @Override
     public boolean add(Empresa empresa) {
-        String sql = "INSERT INTO Empresa values ('"+empresa.getCif()+"'"+
+        String sql = "INSERT INTO APP.EMPRESA values ('"+empresa.getCif()+"'"+
                                                   "'"+empresa.getNombre()+"',"+
                                                   "'"+empresa.getDireccion()+"',"+
                                                   "'"+empresa.getProvincia()+"',"+
@@ -63,7 +63,7 @@ public class EmpresaDAO implements IEmpresaDAO{
     public List<Empresa> getEmpresas() {
         List<Empresa> empresas = new ArrayList<Empresa>();
         ResultSet rs;
-        String sql = "SELECT * FROM Empresa";
+        String sql = "SELECT * FROM APP.EMPRESA";
         
         try{
             stm = db.getCon().createStatement();
@@ -87,7 +87,7 @@ public class EmpresaDAO implements IEmpresaDAO{
             
             stm.close();
         }catch(SQLException e){
-            System.out.println("Error al insertar Empresa: "+e.getMessage());
+            System.out.println("Error al obtener lista de empresas: "+e.getMessage());
             return null;
         }
         

@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat May 19 21:20:20 CEST 2018:
+ Iniciando instancia a816c00e-0163-79d8-7ac1-00000af5a360 de Derby, versión The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): 
+en el directorio de base de datos D:\Users\manue\Documents\NetBeansProjects\FCTManager\derby\FCT_APP con el cargador de clases sun.misc.Launcher$AppClassLoader@60e53b93
+Cargado desde file:/C:/Program%20Files/Java/jdk1.8.0_171/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_171-b11
+user.dir=D:\Users\manue\Documents\NetBeansProjects\FCTManager
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
