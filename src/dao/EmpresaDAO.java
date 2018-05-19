@@ -11,6 +11,7 @@ import java.sql.Statement;
 import java.util.List;
 import model.Empresa;
 import idao.IEmpresaDAO;
+import java.sql.Connection;
 import java.util.ArrayList;
 
 /**
@@ -19,11 +20,11 @@ import java.util.ArrayList;
  */
 public class EmpresaDAO implements IEmpresaDAO{
     
-    private Database db;
+    private Connection con;
     private Statement stm;
 
-    public EmpresaDAO(Database db) {
-        this.db = db;
+    public EmpresaDAO(Connection con) {
+        this.con = con;
         this.stm = null;
     }
     
@@ -46,7 +47,7 @@ public class EmpresaDAO implements IEmpresaDAO{
                 ")";
         
         try{
-            stm = db.getCon().createStatement();
+            stm = con.createStatement();
             stm.execute(sql);
             stm.close();
         }catch(SQLException e){
@@ -66,7 +67,7 @@ public class EmpresaDAO implements IEmpresaDAO{
         String sql = "SELECT * FROM APP.EMPRESA";
         
         try{
-            stm = db.getCon().createStatement();
+            stm = con.createStatement();
             rs = stm.executeQuery(sql);
             
             while(rs.next()){

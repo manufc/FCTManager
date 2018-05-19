@@ -116,6 +116,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jMenu7.setText("Empresas");
 
         jMenuItem1.setText("Gestión de empresas...");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem1);
 
         jMenuItem2.setText("Gestión de convenios...");
@@ -160,6 +165,11 @@ public class MainJFrame extends javax.swing.JFrame {
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        EmpresasJDialog empresasDialog = new EmpresasJDialog(this, rootPaneCheckingEnabled);
+        empresasDialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

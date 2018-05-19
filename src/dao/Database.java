@@ -14,12 +14,12 @@ import java.util.logging.Logger;
  *
  * @author manuel
  */
-public class Database {
-    private String host;
-    private String port;
-    private String user;
-    private String password;
-    private String server;
+public final class Database {
+    private static String host;
+    private static String port;
+    private static String user;
+    private static String password;
+    private static String server;
     private static Connection con;
     private String schema;
 
@@ -59,7 +59,7 @@ public class Database {
         
     }
 
-    public Connection getCon() {
+    public static Connection getCon() {
         return con;
     }
     

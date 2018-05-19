@@ -41,7 +41,7 @@ public class FCTManager {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        /*
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -58,19 +58,19 @@ public class FCTManager {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        */
+        
         //</editor-fold>
 
         /* Create and display the form */
-        /*
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainJFrame().setVisible(true);
             }
         });
-        */
+        
         System.out.println("Obteniendo datos de empresas...");
-        empresaDAO = new EmpresaDAO(db);
+        empresaDAO = new EmpresaDAO(db.getCon());
         List<Empresa> empresas = empresaDAO.getEmpresas();
         if(empresas!=null){
             System.out.println(empresas.size()+" empresas cargadas");        
@@ -79,12 +79,7 @@ public class FCTManager {
             System.out.println("[FALLO]");
         }
         
-        System.out.print("Desconectando...");
-        if(db.disconnect()>=0){
-            System.out.println("[OK]");
-        }else{
-            System.out.println("[FALLO]");
-        }
+        
     }
     
 }
