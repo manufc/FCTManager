@@ -145,6 +145,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jMenu8.setText("Ayuda");
 
         jMenuItem10.setText("Acerca de...");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMenuItem10);
 
         jMenuBar1.add(jMenu8);
@@ -183,6 +188,11 @@ public class MainJFrame extends javax.swing.JFrame {
         EmpresasJDialog empresasDialog = new EmpresasJDialog(this, rootPaneCheckingEnabled);
         empresasDialog.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        AboutJDialog aboDialog = new AboutJDialog(this, rootPaneCheckingEnabled);
+        aboDialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
