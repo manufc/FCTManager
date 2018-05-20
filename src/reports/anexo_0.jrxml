@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Anexo 0" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e417c7c9-9713-4b40-b5d2-cff6ee70f14c">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="156" height="49" uuid="93581909-73d2-4bf9-baad-7378ee1aa006"/>
+				<imageExpression><![CDATA["D:\\Users\\manue\\Documents\\NetBeansProjects\\FCTManager\\src\\resources\\logo_junta.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="486" y="0" width="69" height="61" uuid="aa7e1ad8-0bff-42de-a53a-dd2c204fe8a2"/>
+				<imageExpression><![CDATA["D:\\Users\\manue\\Documents\\NetBeansProjects\\FCTManager\\src\\resources\\logo_UE.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="131" y="61" width="295" height="20" uuid="a1493311-c8ca-4c98-907d-3237bdb32a56"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN GENERAL DE FORMACIÓN PROFESIONAL Y UNIVERSIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="81" width="295" height="25" uuid="e5530061-119a-411f-8c22-eb75d9b0a2a3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORMACIÓN EN CENTROS DE TRABAJO
+CONVENIO CENTRO EDUCATIVO-EMPRESA
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="370" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="59" width="555" height="47" uuid="86a6c03c-8982-49b2-9c88-9c7afa351e05"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Que ambas partes se reconocen recíprocamente capacidad y legitimidad parta convenir.
+- Que el objetivo del presente CONVENIO es la colaboración entre las entidades a las que representan para el desarrollo de un PROGRAMA FORMATIVO de Formación en Centros de Trabajo, dirigido a los alumnos de Formación Profesional Reglada.
+- Que dicha colaboración se fundamenta jurídicamente en el artículo 42, apartado 2, de la Ley Orgánica 2/2006 de Educación (LOE).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="39" width="555" height="20" uuid="baf5f350-f34e-4ecd-9d64-5fa9ffd9ffff"/>
+				<textElement textAlignment="Center">
+					<font fontName="Gill Sans MT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EXPONEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="126" width="555" height="97" uuid="4f541df2-015f-4618-8eb4-572b0d6bfa11"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[- Suscribir el presente CONVENIO de colaboración para el desarrollo del Módulo profesional de Formación en Centro de Trabajo, de acuerdo con la normativa vigente emitida por la Dirección General de Formación Profesional y Universidad para el curso escolar 20___- 20___, que ambas partes conocen y acatan, y en su caso, a lo estipulado en el convenio de colaboración del Consejo Superior de Cámaras de Comercio de España con el Ministerio de Educación y Cultura de fecha 10 de junio de 1999, y de conformidad con las cláusulas que figuran en la página 2 (al dorso de este documento).
+- Al presente convenio se incorporarán, a lo largo del periodo de su vigencia, las relaciones nominales de alumnos acogidos al mismo (Anexo I), la programación de actividades formativas (Anexo II) a desarrollar por éstos en la empresa y los Documentos que faciliten el Seguimiento y Evaluación de los mismos.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="106" width="555" height="20" uuid="83dece80-bb51-47c6-b56f-86f76cd8fdef"/>
+				<textElement textAlignment="Center">
+					<font fontName="Gill Sans MT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACUERDAN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="185" height="39" uuid="07c09ad2-264d-4bad-8c17-0c48e15db5a7"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="11" width="131" height="10" uuid="e1c10fbe-ead0-4e01-b55e-8e6e635ecdd8"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONVENIO ESPECÍFICO Nº________ (1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="223" width="357" height="20" uuid="24d0bd1c-4187-4e39-9515-80549c4edd48"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[En _____________________________ a ____ de _______________________ de 20___]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="253" width="142" height="36" uuid="2ce44d84-7890-4220-8756-e067a1442c22"/>
+				<textElement textAlignment="Center">
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[VºBº
+EL/LA DELEGADO/A PROVINCIAL DE EDUCACIÓN
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="253" width="142" height="36" uuid="feb3d2ee-d63f-44e1-898f-86a8c80e51f6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[EL/LA DIRECTORA/A DEL CENTRO EDUCATIVO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="253" width="142" height="36" uuid="6e69d96e-01b6-4d40-8793-71a5fa562e52"/>
+				<textElement textAlignment="Center">
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[EL/LA REPRESENTANTE DE LA EMPRESA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="338" width="142" height="13" uuid="122fd462-7321-477e-a812-a0c112ef94bc"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[Fdo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="338" width="142" height="13" uuid="623a2222-6d5f-450a-bd35-405b661f7935"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[Fdo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="338" width="142" height="13" uuid="8adf4ccf-9afe-4d8c-a182-e83f7b4e15c1"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[Fdo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="357" width="198" height="13" uuid="019ce0ca-5748-4936-8f8a-b6b7dd5f0382"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<text><![CDATA[ (1) Registro provincial BA/número ó CC/número
+ 
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
