@@ -2,12 +2,16 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Anexo 0" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e417c7c9-9713-4b40-b5d2-cff6ee70f14c">
 	<property name="ireport.zoom" value="1.4641000000000008"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="240"/>
+	<parameter name="CIF" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[6546]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CURSO_ESCOLAR" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="110" splitType="Stretch">
+		<band height="130" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="0" width="156" height="49" uuid="93581909-73d2-4bf9-baad-7378ee1aa006"/>
 				<imageExpression><![CDATA["D:\\Users\\manue\\Documents\\NetBeansProjects\\FCTManager\\src\\resources\\logo_junta.jpg"]]></imageExpression>
@@ -52,20 +56,11 @@ CONVENIO CENTRO EDUCATIVO-EMPRESA
 - Que dicha colaboración se fundamenta jurídicamente en el artículo 42, apartado 2, de la Ley Orgánica 2/2006 de Educación (LOE).]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="39" width="555" height="20" uuid="baf5f350-f34e-4ecd-9d64-5fa9ffd9ffff"/>
+				<reportElement x="0" y="30" width="555" height="20" uuid="baf5f350-f34e-4ecd-9d64-5fa9ffd9ffff"/>
 				<textElement textAlignment="Center">
 					<font fontName="Gill Sans MT" isBold="true"/>
 				</textElement>
 				<text><![CDATA[EXPONEN]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="0" y="126" width="555" height="97" uuid="4f541df2-015f-4618-8eb4-572b0d6bfa11"/>
-				<textElement>
-					<font fontName="Gill Sans MT" size="9"/>
-				</textElement>
-				<text><![CDATA[- Suscribir el presente CONVENIO de colaboración para el desarrollo del Módulo profesional de Formación en Centro de Trabajo, de acuerdo con la normativa vigente emitida por la Dirección General de Formación Profesional y Universidad para el curso escolar 20___- 20___, que ambas partes conocen y acatan, y en su caso, a lo estipulado en el convenio de colaboración del Consejo Superior de Cámaras de Comercio de España con el Ministerio de Educación y Cultura de fecha 10 de junio de 1999, y de conformidad con las cláusulas que figuran en la página 2 (al dorso de este documento).
-- Al presente convenio se incorporarán, a lo largo del periodo de su vigencia, las relaciones nominales de alumnos acogidos al mismo (Anexo I), la programación de actividades formativas (Anexo II) a desarrollar por éstos en la empresa y los Documentos que faciliten el Seguimiento y Evaluación de los mismos.
-]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="106" width="555" height="20" uuid="83dece80-bb51-47c6-b56f-86f76cd8fdef"/>
@@ -75,18 +70,11 @@ CONVENIO CENTRO EDUCATIVO-EMPRESA
 				<text><![CDATA[ACUERDAN]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="0" width="185" height="39" uuid="07c09ad2-264d-4bad-8c17-0c48e15db5a7"/>
+				<reportElement mode="Transparent" x="0" y="0" width="185" height="30" uuid="07c09ad2-264d-4bad-8c17-0c48e15db5a7"/>
 				<graphicElement>
 					<pen lineWidth="2.0" lineStyle="Double"/>
 				</graphicElement>
 			</rectangle>
-			<staticText>
-				<reportElement x="11" y="11" width="131" height="10" uuid="e1c10fbe-ead0-4e01-b55e-8e6e635ecdd8"/>
-				<textElement>
-					<font fontName="Arial Narrow" size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[CONVENIO ESPECÍFICO Nº________ (1)]]></text>
-			</staticText>
 			<staticText>
 				<reportElement x="198" y="223" width="357" height="20" uuid="24d0bd1c-4187-4e39-9515-80549c4edd48"/>
 				<textElement>
@@ -124,20 +112,20 @@ EL/LA DELEGADO/A PROVINCIAL DE EDUCACIÓN
 				</textElement>
 				<text><![CDATA[Fdo:]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="198" y="338" width="142" height="13" uuid="623a2222-6d5f-450a-bd35-405b661f7935"/>
-				<textElement>
+			<textField>
+				<reportElement x="198" y="338" width="142" height="13" uuid="e66a4cd6-34ac-413e-bbfe-5b3e6534756a"/>
+				<textElement markup="none">
 					<font fontName="Gill Sans MT" size="9"/>
 				</textElement>
-				<text><![CDATA[Fdo:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="413" y="338" width="142" height="13" uuid="8adf4ccf-9afe-4d8c-a182-e83f7b4e15c1"/>
-				<textElement>
+				<textFieldExpression><![CDATA[Fdo: $P{DIRECTOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="338" width="142" height="13" uuid="040991e9-34ae-4b66-934d-32737e32dc9d"/>
+				<textElement markup="none">
 					<font fontName="Gill Sans MT" size="9"/>
 				</textElement>
-				<text><![CDATA[Fdo:]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[Fdo: $P{REPRESENTANTE}]]></textFieldExpression>
+			</textField>
 			<staticText>
 				<reportElement x="0" y="357" width="198" height="13" uuid="019ce0ca-5748-4936-8f8a-b6b7dd5f0382"/>
 				<textElement>
@@ -147,6 +135,22 @@ EL/LA DELEGADO/A PROVINCIAL DE EDUCACIÓN
  
 ]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="0" y="126" width="555" height="84" uuid="1b4d51b8-c8a2-42ab-ac60-6ba1c21f5bc7"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[- Suscribir el presente CONVENIO de colaboración para el desarrollo del Módulo profesional de Formación en Centro de Trabajo, de acuerdo con la normativa vigente emitida por la Dirección General de Formación Profesional y Universidad para el curso escolar $P{CURSO_ESCOLAR}, que ambas partes conocen y acatan, y en su caso, a lo estipulado en el convenio de colaboración del Consejo Superior de Cámaras de Comercio de España con el Ministerio de Educación y Cultura de fecha 10 de junio de 1999, y de conformidad con las cláusulas que figuran en la página 2 (al dorso de este documento).
+- Al presente convenio se incorporarán, a lo largo del periodo de su vigencia, las relaciones nominales de alumnos acogidos al mismo (Anexo I), la programación de actividades formativas (Anexo II) a desarrollar por éstos en la empresa y los Documentos que faciliten el Seguimiento y Evaluación de los mismos.
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="10" width="141" height="20" uuid="3e71f268-fe0c-400e-89e7-81be8cacd2b7"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONVENIO ESPECÍFICO Nº________ (1)]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
