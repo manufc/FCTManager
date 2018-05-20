@@ -40,8 +40,8 @@ public class EmpresaDAO implements IEmpresaDAO{
                                                   "'"+empresa.getTelefono()+"',"+
                                                   "'"+empresa.getFax()+"',"+
                                                   "'"+empresa.getEmail()+"',"+
-                                                  "'"+empresa.getResponsable()+"',"+
-                                                  "'"+empresa.getTutor()+"',"+
+                                                  "'"+empresa.getResponsable()+"'"+
+                                                  
                 
                 
                 ")";
@@ -80,8 +80,8 @@ public class EmpresaDAO implements IEmpresaDAO{
                                         rs.getString("telefono"),
                                         rs.getString("fax"),
                                         rs.getString("email"),
-                                        rs.getString("responsable"),
-                                        rs.getString("tutor"));
+                                        rs.getString("responsable")
+                                        );
                 empresas.add(e);
                                         
             }

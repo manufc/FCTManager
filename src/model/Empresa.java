@@ -20,9 +20,9 @@ public class Empresa {
     private String fax;
     private String email;
     private String responsable;
-    private String tutor;
+    
 
-    public Empresa(String cif, String nombre, String direccion, String localidad, String provincia, String cp, String telefono, String fax, String email, String responsable, String tutor) {
+    public Empresa(String cif, String nombre, String direccion, String localidad, String provincia, String cp, String telefono, String fax, String email, String responsable) {
         this.cif = cif;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -33,7 +33,7 @@ public class Empresa {
         this.fax = fax;
         this.email = email;
         this.responsable = responsable;
-        this.tutor = tutor;
+        
     }
 
     /**
@@ -176,19 +176,7 @@ public class Empresa {
         this.responsable = responsable;
     }
 
-    /**
-     * @return the tutor
-     */
-    public String getTutor() {
-        return tutor;
-    }
-
-    /**
-     * @param tutor the tutor to set
-     */
-    public void setTutor(String tutor) {
-        this.tutor = tutor;
-    }
+    
 
     
 

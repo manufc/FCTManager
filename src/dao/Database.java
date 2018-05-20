@@ -48,9 +48,9 @@ public final class Database {
         }
         
         try{
-            this.con = DriverManager.getConnection(this.server,this.user,this.password);
+            this.con = DriverManager.getConnection(this.getServer(),this.user,this.password);
         }catch(SQLException e){
-            System.out.println("Error al conectar a "+server+": "+e.getLocalizedMessage());
+            System.out.println("Error al conectar a "+getServer()+": "+e.getLocalizedMessage());
             e.printStackTrace();
             return null;
         }
@@ -72,5 +72,14 @@ public final class Database {
         }
         return 0;
     }
+
+    /**
+     * @return the server
+     */
+    public static String getServer() {
+        return server;
+    }
+    
+    
     
 }
