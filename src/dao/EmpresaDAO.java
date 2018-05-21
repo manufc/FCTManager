@@ -31,7 +31,7 @@ public class EmpresaDAO implements IEmpresaDAO{
      
     @Override
     public boolean add(Empresa empresa) {
-        String sql = "INSERT INTO APP.EMPRESA values ('"+empresa.getCif()+"'"+
+        String sql = "INSERT INTO APP.EMPRESA values ('"+empresa.getCif()+"',"+
                                                   "'"+empresa.getNombre()+"',"+
                                                   "'"+empresa.getDireccion()+"',"+
                                                   "'"+empresa.getProvincia()+"',"+

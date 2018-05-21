@@ -8,10 +8,13 @@ package view;
 import dao.Database;
 import dao.EmpresaDAO;
 import java.util.List;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import model.Empresa;
+import sun.swing.SwingAccessor;
 
 /**
  *
@@ -30,25 +33,28 @@ public class EmpresasJDialog extends javax.swing.JDialog {
         initComponents();
         fillTable();
         
+        
         empresasJTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 int sel = empresasJTable.getSelectedRow();
-                cifJTextField.setText(empresas.get(sel).getCif());
-                nombreJTextField.setText(empresas.get(sel).getNombre());
-                direccionJTextField.setText(empresas.get(sel).getDireccion());
-                localidadJTextField.setText(empresas.get(sel).getLocalidad());
-                cpJTextField.setText(empresas.get(sel).getCp());
-                provinciaJTextField4.setText(empresas.get(sel).getProvincia());
-                telefonoJTextField.setText(empresas.get(sel).getTelefono());
-                faxJTextField.setText(empresas.get(sel).getFax());
-                emailJTextField.setText(empresas.get(sel).getEmail());
-                responsableJTextField.setText(empresas.get(sel).getResponsable());
+                if(sel>=0){
+                    cifJTextField.setText(empresas.get(sel).getCif());
+                    nombreJTextField.setText(empresas.get(sel).getNombre());
+                    direccionJTextField.setText(empresas.get(sel).getDireccion());
+                    localidadJTextField.setText(empresas.get(sel).getLocalidad());
+                    cpJTextField.setText(empresas.get(sel).getCp());
+                    provinciaJTextField4.setText(empresas.get(sel).getProvincia());
+                    telefonoJTextField.setText(empresas.get(sel).getTelefono());
+                    faxJTextField.setText(empresas.get(sel).getFax());
+                    emailJTextField.setText(empresas.get(sel).getEmail());
+                    responsableJTextField.setText(empresas.get(sel).getResponsable());
                 
-                eliminarJButton.setEnabled(true);
-                editarConvenioJButton.setEnabled(true);
-                actualizarJButton.setEnabled(true);
-                anexo0JButton.setEnabled(true);
+                    eliminarJButton.setEnabled(true);
+                    editarConvenioJButton.setEnabled(true);
+                    actualizarJButton.setEnabled(true);
+                    anexo0JButton.setEnabled(true);
+                }
             }
         });
         
@@ -63,6 +69,14 @@ public class EmpresasJDialog extends javax.swing.JDialog {
         for(int i=0;i<empresas.size();i++){        
             model.addRow(new String[]{empresas.get(i).getCif(),empresas.get(i).getNombre()});        
         }        
+        
+    }
+    
+    private void clearTable(){
+        DefaultTableModel model = (DefaultTableModel) empresasJTable.getModel();
+        empresasJTable.getSelectionModel().clearSelection();
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
         
     }
     
@@ -181,6 +195,11 @@ public class EmpresasJDialog extends javax.swing.JDialog {
         });
 
         cancelarJButton.setText("Cancelar");
+        cancelarJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarJButtonActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Convenio"));
 
@@ -378,16 +397,23 @@ public class EmpresasJDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_cifJTextFieldActionPerformed
 
     private void aceptarJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarJButtonActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_aceptarJButtonActionPerformed
 
     private void nuevaJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaJButtonActionPerformed
-        // TODO add your handling code here:
+        NuevaEmpresaJDialog nuevaEmpresaDialog = new NuevaEmpresaJDialog((JFrame) this.getParent(), rootPaneCheckingEnabled);
+        nuevaEmpresaDialog.setVisible(true);        
+        this.clearTable();
+        this.fillTable();
     }//GEN-LAST:event_nuevaJButtonActionPerformed
 
     private void responsableJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_responsableJTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_responsableJTextFieldActionPerformed
+
+    private void cancelarJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarJButtonActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_cancelarJButtonActionPerformed
 
    
 
